@@ -15,9 +15,10 @@ public class EditTestCase {
 		editobj = new EditObject();
 	}
 	@Test
-	public void edit() {
+	public void edit() throws Throwable {
 		base.lauchBrowser("chrome");
 		base.launchURL("http://www.leafground.com/");
-		editobj.getBtnEdit().click();
+		Thread.sleep(3000);
+		editobj.getBtnEdit();
 	}
 }
